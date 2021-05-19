@@ -75,10 +75,26 @@ function generatLessThan(digitsNum: number) {
       console.log("second add2")
       return arrayOfNum
     }
+  } 
+  if (digitsNum>5&&arrayOfNum[2]>=1){
+    let third =arrayOfNum[2];
+    if(third>1&&third<=5){
+      arrayOfNum[2]-=1;
+      let rand = between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=1
+      console.log("third add1")
+      return arrayOfNum
+    }else if(digitsNum>4&&third>5){
+      arrayOfNum[2]-=2;
+      let rand =between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=2
+      console.log("third add2")
+      return arrayOfNum
+    }
   }
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratLessThan(generatLessThan(between(5,5))), 500); */
+/* setInterval(() =>testOfGeneratLessThan(generatLessThan(between(5,8))), 500); */
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;

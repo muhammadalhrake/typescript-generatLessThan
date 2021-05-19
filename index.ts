@@ -14,14 +14,14 @@ function testOfGeneratLessThan(array: Array<number>) {
   for (let c = 0; c < array.length; c++) {
     sum += array[c];
   }
-  if (sum == 10) {
+  if (sum < 10) {
     testOn = true;
   } else {
     testOn = false;
   }
   console.log(array);
   console.log('Some of digits :' + sum);
-  //console.log(testOn);
+  console.log(testOn);
 }
 //main function
 function generatLessThan(digitsNum: number) {
@@ -50,7 +50,7 @@ function generatLessThan(digitsNum: number) {
   }
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratLessThan(generatLessThan(between(4,9))), 500); */
+/* setInterval(() =>testOfGeneratLessThan(generatLessThan(between(2,5))), 500); */
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');

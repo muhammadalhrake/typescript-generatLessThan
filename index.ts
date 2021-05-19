@@ -20,8 +20,8 @@ function testOfGeneratLessThan(array: Array<number>) {
     testOn = false;
   }
   console.log(array);
-  console.log('Some of digits :' + sum);
-  console.log(testOn);
+  //console.log('Some of digits :' + sum);
+  //console.log(testOn);
 }
 //main function
 function generatLessThan(digitsNum: number) {
@@ -52,19 +52,33 @@ function generatLessThan(digitsNum: number) {
     arrayOfNum[0]-=1;
     let rand = between(0,2)
     arrayOfNum[(digitsNum-1)-rand]+=1;
-    console.log("1")
+    console.log("first add1")
     return arrayOfNum
   }else if(digitsNum>4&&first>5){
     arrayOfNum[0]-=2;
     let rand = between(0,2)
     arrayOfNum[(digitsNum-1)-rand]+=2;
-    console.log("2")
+    console.log("first add2")
     return arrayOfNum
+  }else if (digitsNum>4&&first==1){
+    let second =arrayOfNum[1];
+    if(second>1&&second<=5){
+      arrayOfNum[1]-=1;
+      let rand = between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=1
+      console.log("second add1")
+      return arrayOfNum
+    }else if(digitsNum>4&&second>5){
+      arrayOfNum[1]-=2;
+      let rand =between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=2
+      console.log("second add2")
+      return arrayOfNum
+    }
   }
   return arrayOfNum;
 }
 /* setInterval(() =>testOfGeneratLessThan(generatLessThan(between(5,5))), 500); */
-
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;

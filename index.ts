@@ -75,6 +75,26 @@ function generatLessThan(digitsNum: number) {
       console.log("second add2")
       return arrayOfNum
     }
+  }
+  //filter rate 1
+  if(digitsNum>5&&first>5){
+    arrayOfNum[0]-=3;
+    let rand1 = between(0,4)
+    let rand2=between(0,4)
+    arrayOfNum[(digitsNum-1)-rand1]+=2;
+    arrayOfNum[(digitsNum-1)-rand2]+=1;
+    console.log("first equal add2")
+    return arrayOfNum
+  }
+  //filter rate 2
+  if(digitsNum>5&&arrayOfNum[1]>5){
+    arrayOfNum[1]-=3;
+    let rand1 = between(0,4)
+    let rand2=between(0,4)
+    arrayOfNum[(digitsNum-1)-rand1]+=2;
+    arrayOfNum[(digitsNum-1)-rand2]+=1;
+    console.log("second equal add2")
+    return arrayOfNum
   } 
   if (digitsNum>5&&arrayOfNum[2]>=1){
     let third =arrayOfNum[2];

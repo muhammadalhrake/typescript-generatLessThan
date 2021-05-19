@@ -48,9 +48,22 @@ function generatLessThan(digitsNum: number) {
       }
     }
   }
+  if(digitsNum>4&&first>1&&first<=5){
+    arrayOfNum[0]-=1;
+    let rand = between(0,2)
+    arrayOfNum[(digitsNum-1)-rand]+=1;
+    console.log("1")
+    return arrayOfNum
+  }else if(digitsNum>4&&first>5){
+    arrayOfNum[0]-=2;
+    let rand = between(0,2)
+    arrayOfNum[(digitsNum-1)-rand]+=2;
+    console.log("2")
+    return arrayOfNum
+  }
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratLessThan(generatLessThan(between(2,5))), 500); */
+/* setInterval(() =>testOfGeneratLessThan(generatLessThan(between(5,5))), 500); */
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');

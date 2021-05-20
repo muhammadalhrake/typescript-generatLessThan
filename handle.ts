@@ -42,8 +42,8 @@ export function handle(arrayOfNum, digitsNum) {
     handlePos(arrayOfNum, digitsNum, 1, 3);
     console.log("I'm in hnndel 2");
   } else if (digitsNum == 8 || digitsNum == 9) {
-    handlePos(arrayOfNum, digitsNum, 0, 3);
-    handlePos(arrayOfNum, digitsNum, 1, 2);
+    handlePos(arrayOfNum, digitsNum, 0, 2);
+    handlePos(arrayOfNum, digitsNum, 1, 3);
     handlePos(arrayOfNum, digitsNum, 2, 3);
     console.log("I'm in hnndel 3");
   }
